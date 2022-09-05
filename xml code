@@ -1,0 +1,19 @@
+let xhr=new XMLHttpRequest();
+//Open your request
+xhr.open("GET","https://jsonplaceholder.typicode.com/users");
+//onload event (server will listen to request and process data )
+xhr.onload=function()
+{console.log("************Response Received************");
+console.log(this.responseText);
+//raw datalet 
+data=JSON.parse(xhr.responseText)
+//converted data into object
+console.log(data);
+//Loop throigh the data and print it on the console
+for(let i=0;i<data.length;i++)
+{console.log(`Name:${data[i].name}
+Email:${data[i].email}
+Address:${data[i].address.city} ${data[i].address.street}
+Phone:${data[i].phone}`)}}
+//send the request
+xhr.send();
