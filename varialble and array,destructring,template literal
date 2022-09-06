@@ -1,0 +1,72 @@
+// var num = 1
+// if(num==1){
+//     var num=2;
+//     var num=3;
+//     console.log(num)
+// }
+// console.log(num)
+
+//shows global approach of VAR
+
+// let num = 1
+// if(num==1){
+//     let num=2;
+    
+//     console.log(num)
+// }
+// console.log(num)
+
+// Let cannot be used to assign multiple Times
+
+// for(let i=0;i<10;i++){
+//     console.log(i)
+// }
+// console.log(i);
+
+// Let wouldnot allow to give output outside block
+
+// let course ='MERN';
+// if(course=='MERN'){
+//     var dept1='react developer'
+//     let dept2='full stack developer'
+// }
+// console.log(course)
+// console.log(dept1)
+// console.log(dept2)
+
+// let Getdata=() =>{
+//     var a = 10
+//     let b = 20
+//     const c = 30
+   
+// }
+// Getdata();
+// console.log(a)
+// console.log(b)
+// no output because of functional scope
+
+// Template literal and destructing data
+let employee= {
+    name:"swapnil",
+    age:45,
+    salary:"20 lac/anum",
+    designation:"full stack developer",
+    address : {
+        city:"karnataka",
+        state:"bengalauru",
+        pincode:250001,
+        country:"india"
+    }
+
+}
+
+// Object destructuring
+
+let {name, age, salary, designation, address}= employee;
+console.log(`
+name:${name}
+salary:${salary}`)
+
+let {city, state, pincode, country}= employee.address
+console.log(`city:${city}
+pincode:${pincode}`)
