@@ -1,0 +1,59 @@
+class person {
+    static Companyname= "ibm"; //settimg up company name for all the objects in the class
+    constructor(name, age, email, address)
+    {
+        this.name= name;
+        this.age=age;
+        this.email=email;
+        this.address=address;
+    }
+    //method to fetch person details
+    getdetails ()
+    {
+        let personaldata=`
+        Name:${this.name},
+        Age:${this.name},
+        email:${this.email},
+        address:${this.address}`
+
+
+        console.log(personaldata);
+        
+    }
+    //static method class
+    static getcompanyname(){
+        console.log(person.Companyname)
+    }
+
+}//inherit class person to employee
+class employee extends person{
+    constructor(name, age, email, address, designation, salary){
+        super(name, age, email, address);
+        this.designation=designation;
+        this.salary=salary;
+    }
+    
+    getdetails ()
+    {
+        let employeedata=`
+        Name:${this.name},
+        Age:${this.name},
+        email:${this.email},
+        address:${this.address},
+        designation:${this.designation},
+        salary:${this.salary}`
+
+
+        console.log(employeedata);
+    }
+}
+
+let employee1= new employee("satish",24, "satish@hahah","bangalore", "sse", 25000);
+let person1= new person("john doe", 30,"john@gmail.com","7/118" )
+let person2= new person("mary", 45, "mary@gmail.com","maery villa118")
+
+person1.getdetails() //calling person details
+person.getcompanyname() //calling class name to access company
+employee1.getdetails()
+
+// Code reusability
