@@ -1,0 +1,34 @@
+let data=[10,20,30,40,50]
+data.map((x=>{
+    console.log(x*2); //performing operation on the complete array
+}))
+
+let person=[
+{
+    name: "sohan",
+    age:20,
+    city:"kolkata",
+},
+{
+    name:"mohan",
+    age:32,
+    city:"meerut,"
+}
+]
+// let pname= person.map((obj =>{
+//     return obj.name;
+// }))
+// console.log(pname)
+
+// let totalage = person.reduce((prev, crr)=>{
+//     return prev+crr.age;
+// }, 0)
+// console.log(totalage)
+//reduce function is used to calculate numbers
+
+let maxage= person.reduce((old, crr)=>{
+    return old.age> crr.age? old:crr;
+})
+console.log(maxage)
+
+// Will give person objevct with maximum age
