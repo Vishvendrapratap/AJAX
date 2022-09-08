@@ -1,0 +1,14 @@
+// getter and setter
+class car{
+    setAttributes(name, model, year){
+        this.name= name;
+        this.model= model;
+        this.year=year;
+    }
+    getAttributes(){
+        return `${this.name} ${this.model} ${this.year}`
+    }
+}
+let car1= new car();
+car1.setAttributes("audi", "a4","2018")
+console.log(car1.getAttributes())
